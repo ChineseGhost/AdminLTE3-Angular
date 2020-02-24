@@ -1,0 +1,7 @@
+<app-login *ngIf="CheckAuthen == false"></app-login>
+<div class="wrapper" *ngIf="CheckAuthen">
+  <app-header></app-header>
+  <app-menu></app-menu>
+  <router-outlet></router-outlet>
+  <app-footer></app-footer>
+</div>

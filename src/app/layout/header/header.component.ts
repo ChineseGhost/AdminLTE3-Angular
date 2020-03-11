@@ -12,4 +12,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  LockOut() {
+    // this.CookieService.delete('iCon', '/'); //ลบ Cookie ออก
+    // this.App.setStatusLogin('false');      //ปรับสถานะ Login เป็น False
+    // this.Router.navigate([AppUrl.Login]);   //Naviage to login  
+    // this.App.clearLocalStorage();          //Clear Local Storage
+    // window.location.href = AppUrl.Login;
+  }
+
 }

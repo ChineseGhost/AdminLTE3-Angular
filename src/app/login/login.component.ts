@@ -24,8 +24,10 @@ export class LoginComponent implements OnInit {
 
   Login() {
     localStorage.setItem("UserName", "Ong");
-    this.Router.navigate([AppUrl.Dashboard]);
+    
+    this.body.classList.remove("login-page");
+    this.body.classList.add("hold-transition", "sidebar-mini", "layout-fixed", "layout-navbar-fixed", "layout-footer-fixed");
 
-    // window.location.href = AppUrl.Dashboard;
+    this.Router.navigate([AppUrl.Dashboard]);
   }
 }

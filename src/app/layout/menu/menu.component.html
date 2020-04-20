@@ -1,5 +1,5 @@
   <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4 sidebar-dark-pink">
+  <aside class="main-sidebar elevation-4 sidebar-dark-pink">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
       <img src="../../../assets/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
@@ -25,7 +25,7 @@
           <!-- Add icons to the links using the .nav-icon class
                with font-awesome or any other icon font library -->
           <li class="nav-item has-treeview menu-open">
-            <a routerLink='/' class="nav-link active">
+            <a class="nav-link" #MainMenu>
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
                 Dashboard
@@ -34,19 +34,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link active">
+                <a (click)='SetFocusMenu($event.currentTarget, MainMenu); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v1</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, MainMenu); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v2</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, MainMenu); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v3</p>
                 </a>
@@ -54,7 +54,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a routerLink='/' (click)='HideMenu()' class="nav-link">
+            <a  (click)='SetFocusMenu($event.currentTarget, MainMenu); HideMenu()' class="nav-link" #Widgets>
               <i class="nav-icon fas fa-th"></i>
               <p>
                 Widgets
@@ -63,7 +63,7 @@
             </a>
           </li>
           <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
+            <a href="#" class="nav-link" #Layout>
               <i class="nav-icon fas fa-copy"></i>
               <p>
                 Layout Options
@@ -73,43 +73,43 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, Layout); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Top Navigation</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, Layout); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Top Navigation + Sidebar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, Layout); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Boxed</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, Layout); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Fixed Sidebar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, Layout); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Fixed Navbar</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, Layout); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Fixed Footer</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, Layout); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Collapsed Sidebar</p>
                 </a>
@@ -117,7 +117,7 @@
             </ul>
           </li>
           <li class="nav-item has-treeview">
-            <a routerLink='/' class="nav-link">
+            <a class="nav-link" #Charts>
               <i class="nav-icon fas fa-chart-pie"></i>
               <p>
                 Charts
@@ -126,19 +126,19 @@
             </a>
             <ul class="nav nav-treeview">
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, Charts); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>ChartJS</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, Charts); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Flot</p>
                 </a>
               </li>
               <li class="nav-item">
-                <a routerLink='/' (click)='HideMenu()' class="nav-link">
+                <a  (click)='SetFocusMenu($event.currentTarget, Charts); HideMenu()' class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Inline</p>
                 </a>

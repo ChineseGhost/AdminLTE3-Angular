@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AppUrl } from '../app.url';
 import { AppService } from '../services/app.service';
 import { Router } from '@angular/router';
-
+declare const App : any;
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,17 +17,13 @@ export class LoginComponent implements OnInit {
 
   constructor(public app : AppService, 
               private Router : Router) {
-    this.body.classList.add("hold-transition", "login-page");
+    this.body.classList.add("hold-transition", "login-page", "accent-pink");
    }
 
   ngOnInit() {}
 
   Login() {
     localStorage.setItem("UserName", "Ong");
-    
-    this.body.classList.remove("login-page");
-    this.body.classList.add("hold-transition", "sidebar-mini", "layout-fixed", "layout-navbar-fixed", "layout-footer-fixed");
-
     this.Router.navigate([AppUrl.Dashboard]);
   }
 }

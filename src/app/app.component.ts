@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { LoginComponent } from './login/login.component';
 
 @Component({
   selector: 'app-root',
@@ -7,10 +8,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'AdminLTE3';
-
+  IsLoginComponent : boolean = false;
+  
   constructor() {
 
   }
+
   public get CheckAuthen() :boolean {
     let authUser : string = localStorage.getItem("UserName");
 
@@ -21,5 +24,15 @@ export class AppComponent {
       return false;
     }
 
+  }
+
+  CheckComponent(componentRef) {
+    //เช็คว่าตอนนี้กำลังเปิด Component ไหนอยู่
+    if (!(componentRef instanceof LoginComponent)) {
+      this.IsLoginComponent =  false;
+    }
+    else {
+      this.IsLoginComponent =  true;
+    }
   }
 }

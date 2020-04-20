@@ -22,8 +22,24 @@ export class MenuComponent implements OnInit {
   constructor(private deviceService: DeviceDetectorService) {}
 
   ngOnInit() {
+    this.body.classList.remove("login-page");
+    this.body.classList.add("hold-transition", "sidebar-mini", "layout-fixed", "layout-navbar-fixed", "layout-footer-fixed");
+
+    
     App.initMainPage();
     this.HideMenu();
+  }
+
+  SetFocusMenu(SubMenu: HTMLElement, MainMenu: HTMLElement) {
+    var links = document.getElementsByClassName('nav-link active');
+
+    for (let i : number = links.length-1; i >= 0; i--){
+      const link = links[i] as HTMLElement;
+      link.classList.remove('active');
+    }
+
+    SubMenu.classList.add('active');
+    MainMenu.classList.add('active');
   }
 
   HideMenu() {

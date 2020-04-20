@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AppService } from '../services/app.service';
-
-declare const App : any;
+import { Router } from '@angular/router';
+import { AppUrl } from '../app.url';
 
 @Component({
   selector: 'app-dashboard',
@@ -10,7 +10,10 @@ declare const App : any;
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(public App: AppService) {
+  body = document.getElementsByTagName('body')[0];
+
+  constructor(public App: AppService,
+              private Router : Router) {
     
   }
 
@@ -22,5 +25,8 @@ export class DashboardComponent implements OnInit {
 
   Clear() {
     localStorage.removeItem("UserName");
+    this.body.classList.remove("sidebar-mini", "layout-fixed", "layout-navbar-fixed", "layout-footer-fixed");
+    this.Router.navigate(['/', AppUrl.Login]);
+    // window.location.href = AppUrl.Login;
   }
 }

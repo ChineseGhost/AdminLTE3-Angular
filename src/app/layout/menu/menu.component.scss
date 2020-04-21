@@ -1,3 +1,12 @@
 a:not(.dropdown-item) {
     color: rgba(255,255,255,.8);
 }
+
+[class*=sidebar-dark-] .sidebar a {
+    color: #c2c7d0;
+}
+
+[class*=sidebar-dark] .brand-link {
+    border-bottom: 1px solid #4b545c;
+    color: rgba(255,255,255,.8);
+}

@@ -25,8 +25,6 @@ export class DashboardComponent implements OnInit {
 
   Clear() {
     localStorage.removeItem("UserName");
-    this.body.classList.remove("sidebar-mini", "layout-fixed", "layout-navbar-fixed", "layout-footer-fixed");
-    this.Router.navigate(['/', AppUrl.Login]);
-    // window.location.href = AppUrl.Login;
+    window.location.href = AppUrl.Login;
   }
 }

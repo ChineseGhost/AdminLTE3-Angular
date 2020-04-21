@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AppUrl } from 'src/app/app.url';
 
 @Component({
   selector: 'app-header',
@@ -18,6 +19,8 @@ export class HeaderComponent implements OnInit {
     // this.Router.navigate([AppUrl.Login]);   //Naviage to login  
     // this.App.clearLocalStorage();          //Clear Local Storage
     // window.location.href = AppUrl.Login;
+    localStorage.removeItem("UserName");
+    window.location.href = AppUrl.Login;
   }
 
 }

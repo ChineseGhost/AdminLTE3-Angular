@@ -35,4 +35,16 @@ export class AppComponent {
       this.IsLoginComponent =  true;
     }
   }
+
+  get IsComponentAuthen() : boolean {
+    if (this.CheckAuthen === true && this.IsLoginComponent === false) {
+      return true;
+    }
+    else if (this.CheckAuthen === false && this.IsLoginComponent === false) {
+      return true;
+    }
+    else {
+      return false;
+    }
+  }
 }

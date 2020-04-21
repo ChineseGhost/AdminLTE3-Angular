@@ -1,7 +1,7 @@
 <!-- <app-login *ngIf="CheckAuthen == false"></app-login> -->
 <div class="wrapper">
-  <app-header *ngIf="CheckAuthen && IsLoginComponent == false"></app-header>
-  <app-menu *ngIf="CheckAuthen && IsLoginComponent == false"></app-menu>
+  <app-header *ngIf="IsComponentAuthen"></app-header>
+  <app-menu *ngIf="IsComponentAuthen"></app-menu>
   <router-outlet (activate)='CheckComponent($event)'></router-outlet>
-  <app-footer *ngIf="CheckAuthen && IsLoginComponent == false"></app-footer>
+  <app-footer *ngIf="IsComponentAuthen"></app-footer>
 </div>

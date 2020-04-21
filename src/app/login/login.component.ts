@@ -17,6 +17,8 @@ export class LoginComponent implements OnInit {
 
   constructor(public app : AppService, 
               private Router : Router) {
+    this.body.className = "";
+    this.body.style.removeProperty('height');
     this.body.classList.add("hold-transition", "login-page", "accent-pink");
    }
 

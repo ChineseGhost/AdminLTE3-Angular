@@ -1,4 +1,5 @@
-import { Filter } from './types'; 
+// import { Filter } from './ActiveFilter';
+import { Filter } from './types';
 import FilterItem from './FilterItem';
 import FilterizrOptions from './FilterizrOptions/FilterizrOptions';
 export default class FilterItems {

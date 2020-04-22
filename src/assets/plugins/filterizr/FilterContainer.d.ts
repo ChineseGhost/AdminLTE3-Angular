@@ -1,3 +1,4 @@
+// import { RawOptionsCallbacks } from './FilterizrOptions/defaultOptions';
 import { RawOptionsCallbacks } from './types/interfaces';
 import FilterizrOptions from './FilterizrOptions/FilterizrOptions';
 import FilterItems from './FilterItems';
